@@ -1,0 +1,8 @@
+*Sistema de archivos : JERARQUICO : Los archivos se organizan en carpetas y subcarpetas, 
+Cada elemento puede depender de otro en distintos niveles, formando una estructura de árbol.
+*Organigrama : JERARQUICO : Representa niveles de autoridad y subordinación: una persona o
+área puede tener otras personas o departamentos bajo su responsabilidad.
+*Menú de aplicación : MIXTO : Generalmente tiene una estructura jerárquica (menús, submenús y opciones),
+pero también puede incluir enlaces que conectan directamente con otras secciones, creando relaciones no estrictamente jerárquicas.
+*Árbol genealógico : JERARQUICO : Organiza a los miembros de una familia por generaciones y relaciones de parentesco, partiendo de
+antepasados y ramificándose hacia sus descendientes.
