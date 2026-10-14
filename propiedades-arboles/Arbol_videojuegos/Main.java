@@ -1,3 +1,4 @@
+
 public class Main {
 
     public static void main(String[] args) {
@@ -77,7 +78,19 @@ public class Main {
         mostrarProfundidad(videojuegos, futbol);
         mostrarProfundidad(videojuegos, ageOfEmpires);
 
-        // 6. GRADO DE ALGUNOS NODOS
+        // 6. PROFUNDIDAD DE TODAS LAS HOJAS
+        System.out.println();
+        System.out.println("=== PROFUNDIDAD DE TODAS LAS HOJAS ===");
+        mostrarProfundidad(videojuegos, doom);
+        mostrarProfundidad(videojuegos, lucha);
+        mostrarProfundidad(videojuegos, gtaV);
+        mostrarProfundidad(videojuegos, plataformas);
+        mostrarProfundidad(videojuegos, eaSportsFC);
+        mostrarProfundidad(videojuegos, carreras);
+        mostrarProfundidad(videojuegos, ageOfEmpires);
+        mostrarProfundidad(videojuegos, porTurnos);
+
+        // 7. GRADO DE ALGUNOS NODOS
         System.out.println();
         System.out.println("=== GRADO DE ALGUNOS NODOS ===");
         mostrarGrado(videojuegos);
@@ -86,18 +99,18 @@ public class Main {
         mostrarGrado(mundoAbierto);
         mostrarGrado(doom);
 
-        // 7. TABLA COMPLETA DE MÉTRICAS
+        // 8. TABLA COMPLETA DE MÉTRICAS
         System.out.println();
         System.out.println("=== TABLA DE MÉTRICAS ===");
         MetricasArbol.mostrarTablaMetricas(videojuegos);
 
-        // 8. DOS CAMINOS Y SU LONGITUD
+        // 9. DOS CAMINOS Y SU LONGITUD
         System.out.println();
         System.out.println("=== CAMINOS ===");
         mostrarCamino(videojuegos, doom);
         mostrarCamino(videojuegos, ageOfEmpires);
 
-        // 9. COMPARACIÓN MANUAL VS. CÓDIGO
+        // 10. COMPARACIÓN MANUAL VS. CÓDIGO
         System.out.println();
         System.out.println("=== COMPARACIÓN ===");
         int alturaManual = 3;
@@ -108,6 +121,39 @@ public class Main {
         System.out.println(alturaManual == alturaCalculada
                 ? "Resultado: COINCIDEN."
                 : "Resultado: REVISAR CÁLCULO.");
+
+        // 11. AGREGAR UN NUEVO NIVEL Y COMPARAR LA ALTURA
+        System.out.println();
+        System.out.println("=== PRUEBA: AGREGAR UN NUEVO NIVEL ===");
+
+        int alturaAnterior = MetricasArbol.altura(videojuegos);
+
+        NodoGeneral<String> expansion =
+                new NodoGeneral<>("Expansión");
+
+        // Se agrega un hijo a DOOM, creando un nivel adicional.
+        doom.agregarHijo(expansion);
+
+        int alturaNueva = MetricasArbol.altura(videojuegos);
+
+        System.out.println("Nodo agregado: Expansión");
+        System.out.println("Padre del nuevo nodo: DOOM");
+        System.out.println("Altura anterior: " + alturaAnterior);
+        System.out.println("Altura nueva: " + alturaNueva);
+        System.out.println("Niveles anteriores: " + (alturaAnterior + 1));
+        System.out.println("Niveles nuevos: " + (alturaNueva + 1));
+
+        if (alturaNueva == alturaAnterior + 1) {
+            System.out.println(
+                    "Resultado: la altura aumentó correctamente en 1.");
+        } else {
+            System.out.println(
+                    "Resultado: revisar el cálculo de la altura.");
+        }
+
+        System.out.println();
+        System.out.println("=== ÁRBOL MODIFICADO ===");
+        MetricasArbol.mostrarArbol(videojuegos, 0);
     }
 
     private static void mostrarProfundidad(
