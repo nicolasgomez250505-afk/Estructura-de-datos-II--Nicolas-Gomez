@@ -1,7 +1,8 @@
 # Guía 2 – Anatomía y propiedades de un árbol
 
+NICOLAS ALBERTO GOMEZ VILLARREAL
 **Asignatura:** Estructura de Datos II  
-**Programas:** Ingeniería de Software – Ingeniería de Sistemas  
+**Programa:** Ingeniería de Sistemas  
 **Semestre:** IV  
 **Ecosistema:** Java / GitHub
 
