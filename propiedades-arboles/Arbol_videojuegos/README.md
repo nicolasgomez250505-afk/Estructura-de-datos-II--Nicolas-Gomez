@@ -1,6 +1,7 @@
 # Guía 2 – Anatomía y propiedades de un árbol
 
 NICOLAS ALBERTO GOMEZ VILLARREAL
+
 SERGIO VALENCIA PIRE
 
 **Asignatura:** Estructura de Datos II  
