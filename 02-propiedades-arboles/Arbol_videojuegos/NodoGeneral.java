@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Nodo general para representar un árbol n-ario.
+ * Nodo general para representar un árbol 
  * Cada nodo almacena un dato y una lista de hijos.
  *
  * @param <T> tipo de dato almacenado.
