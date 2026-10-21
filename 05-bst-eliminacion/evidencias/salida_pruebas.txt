@@ -1,0 +1,50 @@
+=== PRUEBAS DE CASOS BASICOS ===
+[OK]    Hoja: inorden sin el 20
+[OK]    Hoja: el padre (30) ya no tiene hijo izquierdo
+[OK]    Hoja: el 20 ya no existe
+[OK]    Hoja: BST valido
+[OK]    Un hijo (der): 70 apunta directo a 65
+[OK]    Un hijo (der): inorden correcto
+[OK]    Un hijo (der): BST valido
+[OK]    Un hijo (izq): 30 apunta directo a 35
+[OK]    Un hijo (izq): inorden correcto
+[OK]    Un hijo (izq): BST valido
+[OK]    Dos hijos: el nodo conserva su lugar con el valor del sucesor (40)
+[OK]    Dos hijos: el hijo izquierdo sigue siendo 20
+[OK]    Dos hijos: el 40 original se elimino (sin duplicados)
+[OK]    Dos hijos: inorden correcto
+[OK]    Dos hijos: BST valido
+[OK]    Raiz: la nueva raiz es el sucesor (60)
+[OK]    Raiz: inorden correcto
+[OK]    Raiz: BST valido
+[OK]    Raiz: el 50 ya no existe
+[OK]    Raiz + sucesor con hijo: nueva raiz 60
+[OK]    Raiz + sucesor con hijo: 70 queda con hijo izquierdo 65
+[OK]    Raiz + sucesor con hijo: inorden correcto
+[OK]    Raiz + sucesor con hijo: BST valido
+
+=== PRUEBAS DE BORDE ===
+[OK]    Un solo nodo: la raiz queda en null
+[OK]    Un solo nodo: 0 nodos
+[OK]    Arbol vacio: eliminar no falla y sigue vacio
+[OK]    Inexistente: no cambia el inorden
+[OK]    Inexistente: sigue con 7 nodos
+[OK]    Vaciar todo: BST valido tras cada eliminacion
+[OK]    Vaciar todo: el arbol queda vacio
+[OK]    Duplicados: BST valido tras eliminar 50 dos veces
+[OK]    Duplicados: se elimina una ocurrencia por llamada
+
+=== VARIANTE CON ANTECESOR ===
+[OK]    Antecesor: la nueva raiz es 40
+[OK]    Antecesor: inorden correcto
+[OK]    Antecesor: BST valido
+[INFO]  Claves {5,3,3,8}, eliminar 5 -> antecesor valido: false | sucesor valido: true
+[OK]    Sucesor es estable con duplicados en el caso {5,3,3,8}
+
+=== PRUEBAS ALEATORIAS (contra una lista de referencia) ===
+[OK]    Aleatorio (sucesor, con duplicados): 2000 operaciones coherentes
+[OK]    Aleatorio (antecesor, claves unicas): 2000 operaciones coherentes
+
+----------------------------------------
+Verificaciones: 38 | Fallos: 0
+RESULTADO: TODAS LAS PRUEBAS PASARON

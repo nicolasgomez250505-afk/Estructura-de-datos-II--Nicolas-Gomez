@@ -1,0 +1,120 @@
+================================================
+CASO 1: ELIMINAR UN NODO HOJA
+================================================
+Hoja: no tiene hijos.
+
+ANTES de eliminar 20:
+        80
+    70
+        60
+50
+        40
+    30
+        20
+Inorden: 20 30 40 50 60 70 80
+
+DESPUES de eliminar 20:
+        80
+    70
+        60
+50
+        40
+    30
+Inorden: 30 40 50 60 70 80
+Raiz actual        : 50
+Nodos antes/despues: 7 / 6
+Existe 20?        : false
+BST valido?        : true
+
+================================================
+CASO 2: ELIMINAR UN NODO CON UN HIJO
+================================================
+60 tiene un solo hijo: 65.
+
+ANTES de eliminar 60:
+        80
+    70
+            65
+        60
+50
+        40
+    30
+        20
+Inorden: 20 30 40 50 60 65 70 80
+
+DESPUES de eliminar 60:
+        80
+    70
+        65
+50
+        40
+    30
+        20
+Inorden: 20 30 40 50 65 70 80
+Raiz actual        : 50
+Nodos antes/despues: 8 / 7
+Existe 60?        : false
+BST valido?        : true
+
+================================================
+CASO 3: ELIMINAR UN NODO CON DOS HIJOS
+================================================
+30 tiene dos hijos: 20 y 40. Sucesor inorden = 40.
+
+ANTES de eliminar 30:
+        80
+    70
+        60
+50
+        40
+    30
+        20
+Inorden: 20 30 40 50 60 70 80
+
+DESPUES de eliminar 30:
+        80
+    70
+        60
+50
+    40
+        20
+Inorden: 20 40 50 60 70 80
+Raiz actual        : 50
+Nodos antes/despues: 7 / 6
+Existe 30?        : false
+BST valido?        : true
+
+================================================
+EJERCICIO: ELIMINAR LA RAIZ
+================================================
+La raiz 50 tiene dos hijos. Sucesor inorden = 60 (con hijo 65).
+
+ANTES de eliminar 50:
+        80
+    70
+            65
+        60
+50
+        40
+    30
+        20
+Inorden: 20 30 40 50 60 65 70 80
+
+DESPUES de eliminar 50:
+        80
+    70
+        65
+60
+        40
+    30
+        20
+Inorden: 20 30 40 60 65 70 80
+Raiz actual        : 60
+Nodos antes/despues: 8 / 7
+Existe 50?        : false
+BST valido?        : true
+
+================================================
+EXTRA: ELIMINAR UN VALOR QUE NO EXISTE
+================================================
+Nodos antes: 7 | despues: 7 | BST valido: true
