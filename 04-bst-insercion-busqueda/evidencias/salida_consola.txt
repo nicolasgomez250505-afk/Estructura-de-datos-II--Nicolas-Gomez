@@ -1,0 +1,67 @@
+=== EJERCICIO 1: BST DE 7 NODOS ===
+        80
+    70
+        60
+50
+        40
+    30
+        20
+Inorden: 20 30 40 50 60 70 80
+Altura : 2
+
+=== EJERCICIO 2: CAMINO DE BUSQUEDA ===
+Buscar 60 | encontrado=true | comparaciones=3 | camino: 50 -> 70 -> 60
+Buscar 65 | encontrado=false | comparaciones=3 | camino: 50 -> 70 -> 60 -> null
+
+=== 15 CODIGOS EN ORDEN ALEATORIO ===
+Orden de insercion: [3900, 1200, 7200, 5000, 900, 8500, 2300, 6100, 4500, 1800, 7800, 3100, 5600, 2700, 6700]
+        8500
+            7800
+    7200
+                6700
+            6100
+                5600
+        5000
+            4500
+3900
+            3100
+                2700
+        2300
+            1800
+    1200
+        900
+Buscar 900 | encontrado=true | comparaciones=3 | camino: 3900 -> 1200 -> 900
+Buscar 3100 | encontrado=true | comparaciones=4 | camino: 3900 -> 1200 -> 2300 -> 3100
+Buscar 6100 | encontrado=true | comparaciones=4 | camino: 3900 -> 7200 -> 5000 -> 6100
+Buscar 8500 | encontrado=true | comparaciones=3 | camino: 3900 -> 7200 -> 8500
+Buscar 9999 | encontrado=false | comparaciones=3 | camino: 3900 -> 7200 -> 8500 -> null
+
+=== 15 CODIGOS YA ORDENADOS ===
+Orden de insercion: [900, 1200, 1800, 2300, 2700, 3100, 3900, 4500, 5000, 5600, 6100, 6700, 7200, 7800, 8500]
+                                                        8500
+                                                    7800
+                                                7200
+                                            6700
+                                        6100
+                                    5600
+                                5000
+                            4500
+                        3900
+                    3100
+                2700
+            2300
+        1800
+    1200
+900
+Buscar 900 | encontrado=true | comparaciones=1 | camino: 900
+Buscar 3100 | encontrado=true | comparaciones=6 | camino: 900 -> 1200 -> 1800 -> 2300 -> 2700 -> 3100
+Buscar 6100 | encontrado=true | comparaciones=11 | camino: 900 -> 1200 -> 1800 -> 2300 -> 2700 -> 3100 -> 3900 -> 4500 -> 5000 -> 5600 -> 6100
+Buscar 8500 | encontrado=true | comparaciones=15 | camino: 900 -> 1200 -> 1800 -> 2300 -> 2700 -> 3100 -> 3900 -> 4500 -> 5000 -> 5600 -> 6100 -> 6700 -> 7200 -> 7800 -> 8500
+Buscar 9999 | encontrado=false | comparaciones=15 | camino: 900 -> 1200 -> 1800 -> 2300 -> 2700 -> 3100 -> 3900 -> 4500 -> 5000 -> 5600 -> 6100 -> 6700 -> 7200 -> 7800 -> 8500 -> null
+
+=== TABLA COMPARATIVA ===
+Escenario           Nodos   Altura  Comparaciones   Promedio
+Orden aleatorio        15        4             17        3.4
+Orden ordenado         15       14             48        9.6
+
+Conclusion: insertar datos ya ordenados degenera el BST en una lista enlazada y acerca las operaciones a O(n).
