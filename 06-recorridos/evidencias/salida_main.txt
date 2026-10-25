@@ -1,0 +1,89 @@
+
+================================================
+EJERCICIO 1: BST DE 10 PRODUCTOS POR CODIGO
+================================================
+Orden de insercion: [4500, 2500, 6500, 1500, 3500, 5500, 8500, 3000, 7500, 9500]
+Nodos: 10 | Altura: 3 | BST valido: true
+
+            9500
+        8500
+            7500
+    6500
+        5500
+4500
+        3500
+            3000
+    2500
+        1500
+
+================================================
+SECUENCIAS DE LOS CUATRO RECORRIDOS
+================================================
+Preorden   (raiz-izq-der): 4500 2500 1500 3500 3000 6500 5500 8500 7500 9500
+Inorden    (izq-raiz-der): 1500 2500 3000 3500 4500 5500 6500 7500 8500 9500
+Postorden  (izq-der-raiz): 1500 3000 3500 2500 5500 7500 9500 8500 6500 4500
+Por niveles (BFS, cola)  : 4500 2500 6500 1500 3500 5500 8500 3000 7500 9500
+
+================================================
+RECORRIDO POR NIVELES, NIVEL A NIVEL
+================================================
+Nivel 0: 4500
+Nivel 1: 2500 6500
+Nivel 2: 1500 3500 5500 8500
+Nivel 3: 3000 7500 9500
+
+================================================
+TRAZA DE LA COLA EN EL RECORRIDO POR NIVELES
+================================================
+Inicio                      | cola = [4500]
+Paso  1: visita 4500      | cola = [2500, 6500]
+Paso  2: visita 2500      | cola = [6500, 1500, 3500]
+Paso  3: visita 6500      | cola = [1500, 3500, 5500, 8500]
+Paso  4: visita 1500      | cola = [3500, 5500, 8500]
+Paso  5: visita 3500      | cola = [5500, 8500, 3000]
+Paso  6: visita 5500      | cola = [8500, 3000]
+Paso  7: visita 8500      | cola = [3000, 7500, 9500]
+Paso  8: visita 3000      | cola = [7500, 9500]
+Paso  9: visita 7500      | cola = [9500]
+Paso 10: visita 9500      | cola = []
+
+================================================
+CATALOGO EN ORDEN DE CODIGO (INORDEN)
+================================================
+ 1500  Cuaderno
+ 2500  Lapiz
+ 3000  Borrador
+ 3500  Regla
+ 4500  Mochila
+ 5500  Calculadora
+ 6500  Marcadores
+ 7500  Tijeras
+ 8500  Pegante
+ 9500  Carpeta
+
+================================================
+EJERCICIO 2: INORDEN FRENTE A UNA LISTA ORDENADA
+================================================
+Lista ordenada: 1500 2500 3000 3500 4500 5500 6500 7500 8500 9500
+Inorden       : 1500 2500 3000 3500 4500 5500 6500 7500 8500 9500
+Son iguales?  : true
+
+================================================
+RELACIONES ENTRE LAS SALIDAS
+================================================
+Raiz del arbol                    : 4500
+Primer elemento de preorden       : 4500
+Ultimo elemento de postorden      : 4500
+Primer elemento por niveles       : 4500
+Postorden es el reflejo de preorden con hijos intercambiados: true
+Insertar en PREORDEN reconstruye el mismo arbol  : true
+Insertar en NIVELES reconstruye el mismo arbol   : true
+Insertar en POSTORDEN reconstruye el mismo arbol : false
+
+================================================
+EJERCICIO 3: ELIMINAR EL ARBOL COMPLETO (POSTORDEN)
+================================================
+Nodos antes     : 10
+Orden de liberacion: 1500 3000 3500 2500 5500 7500 9500 8500 6500 4500
+Coincide con postorden: true
+Nodos despues   : 0 | raiz == null: true

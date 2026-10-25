@@ -1,0 +1,41 @@
+=== SECUENCIAS ESPERADAS (derivadas a mano) ===
+[OK]    10 productos: preorden
+[OK]    10 productos: inorden
+[OK]    10 productos: postorden
+[OK]    10 productos: por niveles
+[OK]    7 nodos: preorden
+[OK]    7 nodos: inorden
+[OK]    7 nodos: postorden
+[OK]    7 nodos: por niveles
+
+=== CASOS DE BORDE ===
+[OK]    Vacio: los cuatro recorridos devuelven lista vacia
+[OK]    Vacio: porNivelesAgrupado y traza vacios
+[OK]    Un nodo: los cuatro recorridos devuelven [42]
+[OK]    Degenerado: preorden = inorden = por niveles
+[OK]    Degenerado: postorden es el reverso
+[OK]    Duplicados: los cuatro recorridos devuelven 3 elementos
+[OK]    Duplicados: inorden = [5, 5, 5]
+
+=== PROPIEDADES ===
+[OK]    Ejercicio 2: inorden == lista ordenada
+[OK]    Agrupado: 4 niveles con 1, 2, 4 y 3 nodos
+[OK]    Agrupado: nivel 1 = [2500, 6500]
+[OK]    Agrupado: niveles == altura + 1
+[OK]    Agrupado: aplanado == porNiveles()
+[OK]    Traza: un paso por nodo mas el inicio
+[OK]    Ejercicio 3: orden de liberacion == postorden
+[OK]    Ejercicio 3: el arbol queda vacio
+[OK]    Ejercicio 3: eliminar un arbol vacio no falla
+
+=== PRUEBAS ALEATORIAS (500 arboles) ===
+[OK]    Aleatorio: inorden siempre ordenado
+[OK]    Aleatorio: los cuatro recorridos tienen los mismos elementos
+[OK]    Aleatorio: raiz primera (preorden, niveles) y ultima (postorden)
+[OK]    Aleatorio: insertar en preorden / por niveles reconstruye el arbol
+[OK]    Aleatorio: cantidad de niveles == altura + 1
+[OK]    Aleatorio: el arbol es un BST valido
+
+----------------------------------------
+Verificaciones: 30 | Fallos: 0
+RESULTADO: TODAS LAS PRUEBAS PASARON
